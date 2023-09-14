@@ -1,6 +1,9 @@
-    function query(sql, resultFunc)
+import tedious from 'tedious' 
+
+
+    function execQuery(sql, resultFunc, errorFunc)
     {
-        var Connection = require('tedious').Connection;  
+        
         var config = {  
             server: '192.168.0.67',  //update me
             port:1433,
@@ -18,31 +21,34 @@
                 database: 'burnoutados'  //update me
             }
         };  
-        var connection = new Connection(config);  
+        var connection = new tedious.Connection(config);  
         connection.on('connect', function(err) {  
             // If no error, then good to proceed.
             console.log("connecting");  
             if(err)
             {
                 console.log(err);
+                errorFunc(err);
             }
             else
             {
                 console.log("Connected"); 
-                executeStatement(sql, resultFunc);
+                executeStatement();
             }
                 
              
         });
 
 
-        var Request = require('tedious').Request;  
-        var TYPES = require('tedious').TYPES;  
+        
+        //var TYPES = require('tedious').TYPES;  
       
-        function executeStatement(sql, resultFunc) {  
-            var request = new Request(sql, function(err) {  
-            if (err) {  
-                console.log(err);}  
+        function executeStatement() {  
+            var request = new tedious.Request(sql, function(err) {  
+                if (err) {  
+                    console.log(err);
+                    errorFunc(err);
+                }  
             });  
 
 
@@ -79,7 +85,16 @@
     }
 
 
-    query("select * from Users;", function(result)
+
+
+    export const  query = async (sql) => 
     {
-        console.log(result);
-    });
+        return new Promise((resolve, reject) => 
+        {
+            execQuery(sql, resolve, reject);
+        });
+    }
+
+
+    let result = await query("select * from Users;");
+    console.log(result);
