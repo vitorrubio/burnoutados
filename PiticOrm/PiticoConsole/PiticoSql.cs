@@ -1,6 +1,7 @@
 ﻿using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
+using System.Linq;
 
 public delegate void DatabaseMapRowDelegate<T>(T item, IDataRecord record, int rowNum);
 
@@ -99,25 +100,6 @@ public class PiticoSql
         return result;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public IEnumerable<T> MapRows<T>(string sql, DatabaseMapRowDelegate<T> action) where T : class, new()
     {
         using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -141,10 +123,61 @@ public class PiticoSql
 
 
 
+    public T Add<T>(T item) where T : class, new()
+    {
+        string fields = "";
+        string values = "";
+        List<SqlParameter> parametros = new List<SqlParameter>();
+
+        var props = item.GetType().GetProperties().Where(x => x.Name != "id" && x.GetValue(item) != null).ToList();
+
+        fields = string.Join(",", props.Select(x => x.Name));
+        
+        values = string.Join(",", props.Select(x => "@"+x.Name));
+        
+        parametros.AddRange(
+            props
+            .Select(x => new SqlParameter
+            (
+                "@"+x.Name,
+                x.PropertyType.Name switch 
+                {
+                    "Int32" or  "int"  => SqlDbType.Int,
+                    "Int64" or  "long" => SqlDbType.BigInt,                  
+                    "DateTime" => SqlDbType.DateTime,
+                    "double" or "Double"  => SqlDbType.Float,
+                    "string" or "String" => SqlDbType.VarChar,
+                    _ => throw new ArgumentOutOfRangeException($"Propriedade {x.Name} Tipo {x.PropertyType.Name } não encontrado"),
+                }
+                
+            )
+            {
+                Value = x.GetValue(item)
+            })
+        );
 
 
+        foreach(var p in parametros)
+        {
+            Console.WriteLine($"{p.ParameterName}={p.Value}");
+        }
+ 
 
+        string sql = $"insert into {(typeof(T).Name)}s ({fields}) values ({values}); select scope_identity()";
 
+        Console.WriteLine(sql);
+
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            connection.Open();
+            SqlCommand command = new SqlCommand(sql, connection);
+            command.Parameters.AddRange(parametros.ToArray());
+
+            int result = Convert.ToInt32( command.ExecuteScalar());
+
+            return Query<T>($"select * from {(typeof(T).Name)}s where id = {result}").First();
+        }        
+    }
 }
 
 
