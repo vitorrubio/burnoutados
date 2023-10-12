@@ -53,7 +53,7 @@ namespace AgendaBeleza
             app.UseCors(PoliticaCors);
 
             app.UseAuthorization();
-
+            
 
             app.MapControllers();
 

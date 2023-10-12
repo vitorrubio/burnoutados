@@ -10,6 +10,7 @@ namespace AgendaBeleza.Dados
         //public DbSet<Cliente> Clientes { get; set; }
 
         public DbSet<Cliente> Clientes => Set<Cliente>();
+        public DbSet<Servico> Servicos => Set<Servico>();
 
     }
 }
