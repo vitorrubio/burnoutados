@@ -2,6 +2,7 @@
 using AgendaBeleza.Dominio;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace AgendaBeleza.Controllers
 {
@@ -33,7 +34,7 @@ namespace AgendaBeleza.Controllers
         [HttpGet]
         public ActionResult<List<Cliente>> Get()
         {
-            return Ok(_contexto.Clientes.ToList());
+            return Ok(_contexto.Clientes.AsNoTracking().ToList());
         }
 
 
@@ -41,7 +42,7 @@ namespace AgendaBeleza.Controllers
         [HttpGet("{id:int}")]
         public ActionResult<Cliente> Get(int id)
         {
-            var cliente = _contexto.Clientes.Find(id);
+            var cliente = _contexto.Clientes.AsNoTracking().FirstOrDefault(x => x.Id == id);
             if (cliente == null)
             {
                 return NotFound();
@@ -57,10 +58,10 @@ namespace AgendaBeleza.Controllers
         {
             if (pag <= 0 || qtdPag <= 0)
             {
-                return BadRequest("O seu animal");
+                return BadRequest();
             }
 
-            var totalClientes = _contexto.Clientes.Count();
+            var totalClientes = _contexto.Clientes.AsNoTracking().Count();
             var totalPaginas = totalClientes / qtdPag;
             if (totalClientes % qtdPag > 0)
             {
@@ -69,7 +70,7 @@ namespace AgendaBeleza.Controllers
 
             if (pag > totalPaginas)
             {
-                return BadRequest("O seu pilantra");
+                return BadRequest();
             }
 
             var cliente = _contexto
@@ -94,18 +95,15 @@ namespace AgendaBeleza.Controllers
 
 
 
-
-
-
         [HttpGet("alfabetico/{txt}/{qtdPag:int}/{pag:int}")]
-        public ActionResult GetLetra(string txt, int qtdPag = 10, int pag = 1)
+        public ActionResult GetPorTexto(string txt, int qtdPag = 10, int pag = 1)
         {
             if (pag <= 0 || qtdPag <= 0)
             {
-                return BadRequest("O seu animal");
+                return BadRequest();
             }
 
-            var totalClientes = _contexto.Clientes.Where(x => x.Nome.Contains(txt)).Count();
+            var totalClientes = _contexto.Clientes.AsNoTracking().Where(x => x.Nome.Contains(txt)).Count();
             var totalPaginas = totalClientes / qtdPag;
             if (totalClientes % qtdPag > 0)
             {
@@ -114,11 +112,17 @@ namespace AgendaBeleza.Controllers
 
             if (pag > totalPaginas)
             {
-                return BadRequest("O seu pilantra");
+                return BadRequest();
             }
 
             var cliente = _contexto
                 .Clientes
+                .Select(x => new
+                {
+                    x.Id,
+                    x.Nome,
+                    x.Apelido
+                })
                 .Where(x => x.Nome.Contains(txt))
                 .OrderBy(x => x.Nome)
                 .Skip((pag - 1) * qtdPag)
@@ -137,5 +141,52 @@ namespace AgendaBeleza.Controllers
                 Clientes = cliente
             });
         }
+
+
+
+
+
+        [HttpDelete("{id:int}")]
+        public ActionResult Delete(int id)
+        {
+            var cli = _contexto.Clientes.Find(id);
+            if (cli == null)
+            {
+                return NotFound();
+            }
+
+            _contexto.Clientes.Remove(cli);
+            if (_contexto.SaveChanges() > 0)
+            {
+                return NoContent();
+            }
+
+            return BadRequest();
+        }
+
+
+
+        [HttpPatch("{id:int}")]
+        public ActionResult Patch(int id, [FromBody] Cliente alteracao)
+        {
+            var atual = _contexto.Clientes.Find(id);
+            if (atual == null)
+            {
+                return NotFound();
+            }
+
+            atual.Nome = alteracao.Nome;
+            atual.Apelido = alteracao.Apelido;
+            atual.DataNascimento = alteracao.DataNascimento;
+            atual.Bloqueado = alteracao.Bloqueado;
+            atual.CPF = alteracao.CPF;
+
+            _contexto.SaveChanges();
+
+            return Ok(atual);
+
+        }
+
+
     }
 }
