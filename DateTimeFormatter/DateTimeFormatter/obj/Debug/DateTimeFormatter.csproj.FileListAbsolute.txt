@@ -1,0 +1,8 @@
+C:\Users\vitor\OneDrive\Desktop\DateTimeFormatter\DateTimeFormatter\bin\Debug\DateTimeFormatter.exe.config
+C:\Users\vitor\OneDrive\Desktop\DateTimeFormatter\DateTimeFormatter\bin\Debug\DateTimeFormatter.exe
+C:\Users\vitor\OneDrive\Desktop\DateTimeFormatter\DateTimeFormatter\bin\Debug\DateTimeFormatter.pdb
+C:\Users\vitor\OneDrive\Desktop\DateTimeFormatter\DateTimeFormatter\obj\Debug\DateTimeFormatter.csproj.AssemblyReference.cache
+C:\Users\vitor\OneDrive\Desktop\DateTimeFormatter\DateTimeFormatter\obj\Debug\DateTimeFormatter.csproj.SuggestedBindingRedirects.cache
+C:\Users\vitor\OneDrive\Desktop\DateTimeFormatter\DateTimeFormatter\obj\Debug\DateTimeFormatter.csproj.CoreCompileInputs.cache
+C:\Users\vitor\OneDrive\Desktop\DateTimeFormatter\DateTimeFormatter\obj\Debug\DateTimeFormatter.exe
+C:\Users\vitor\OneDrive\Desktop\DateTimeFormatter\DateTimeFormatter\obj\Debug\DateTimeFormatter.pdb

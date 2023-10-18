@@ -1,0 +1,15 @@
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\StressExecutor\bin\Debug\net7.0\StressExecutor.exe
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\StressExecutor\bin\Debug\net7.0\StressExecutor.deps.json
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\StressExecutor\bin\Debug\net7.0\StressExecutor.runtimeconfig.json
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\StressExecutor\bin\Debug\net7.0\StressExecutor.dll
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\StressExecutor\bin\Debug\net7.0\StressExecutor.pdb
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\StressExecutor\obj\Debug\net7.0\StressExecutor.csproj.AssemblyReference.cache
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\StressExecutor\obj\Debug\net7.0\StressExecutor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\StressExecutor\obj\Debug\net7.0\StressExecutor.AssemblyInfoInputs.cache
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\StressExecutor\obj\Debug\net7.0\StressExecutor.AssemblyInfo.cs
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\StressExecutor\obj\Debug\net7.0\StressExecutor.csproj.CoreCompileInputs.cache
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\StressExecutor\obj\Debug\net7.0\StressExecutor.dll
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\StressExecutor\obj\Debug\net7.0\refint\StressExecutor.dll
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\StressExecutor\obj\Debug\net7.0\StressExecutor.pdb
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\StressExecutor\obj\Debug\net7.0\StressExecutor.genruntimeconfig.cache
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\StressExecutor\obj\Debug\net7.0\ref\StressExecutor.dll

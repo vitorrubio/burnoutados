@@ -1,0 +1,8 @@
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\Cobaia\bin\Debug\Cobaia.exe.config
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\Cobaia\bin\Debug\Cobaia.exe
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\Cobaia\bin\Debug\Cobaia.pdb
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\Cobaia\obj\Debug\Cobaia.csproj.AssemblyReference.cache
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\Cobaia\obj\Debug\Cobaia.csproj.SuggestedBindingRedirects.cache
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\Cobaia\obj\Debug\Cobaia.csproj.CoreCompileInputs.cache
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\Cobaia\obj\Debug\Cobaia.exe
+C:\Users\vitor\OneDrive\Desktop\FlowsElasticSearchStressTest\Cobaia\obj\Debug\Cobaia.pdb

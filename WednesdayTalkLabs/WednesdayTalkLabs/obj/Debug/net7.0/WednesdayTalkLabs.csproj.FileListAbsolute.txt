@@ -1,0 +1,15 @@
+C:\Users\vitor\OneDrive\Desktop\WednesdayTalkLabs\WednesdayTalkLabs\bin\Debug\net7.0\WednesdayTalkLabs.exe
+C:\Users\vitor\OneDrive\Desktop\WednesdayTalkLabs\WednesdayTalkLabs\bin\Debug\net7.0\WednesdayTalkLabs.deps.json
+C:\Users\vitor\OneDrive\Desktop\WednesdayTalkLabs\WednesdayTalkLabs\bin\Debug\net7.0\WednesdayTalkLabs.runtimeconfig.json
+C:\Users\vitor\OneDrive\Desktop\WednesdayTalkLabs\WednesdayTalkLabs\bin\Debug\net7.0\WednesdayTalkLabs.dll
+C:\Users\vitor\OneDrive\Desktop\WednesdayTalkLabs\WednesdayTalkLabs\bin\Debug\net7.0\WednesdayTalkLabs.pdb
+C:\Users\vitor\OneDrive\Desktop\WednesdayTalkLabs\WednesdayTalkLabs\obj\Debug\net7.0\WednesdayTalkLabs.csproj.AssemblyReference.cache
+C:\Users\vitor\OneDrive\Desktop\WednesdayTalkLabs\WednesdayTalkLabs\obj\Debug\net7.0\WednesdayTalkLabs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vitor\OneDrive\Desktop\WednesdayTalkLabs\WednesdayTalkLabs\obj\Debug\net7.0\WednesdayTalkLabs.AssemblyInfoInputs.cache
+C:\Users\vitor\OneDrive\Desktop\WednesdayTalkLabs\WednesdayTalkLabs\obj\Debug\net7.0\WednesdayTalkLabs.AssemblyInfo.cs
+C:\Users\vitor\OneDrive\Desktop\WednesdayTalkLabs\WednesdayTalkLabs\obj\Debug\net7.0\WednesdayTalkLabs.csproj.CoreCompileInputs.cache
+C:\Users\vitor\OneDrive\Desktop\WednesdayTalkLabs\WednesdayTalkLabs\obj\Debug\net7.0\WednesdayTalkLabs.dll
+C:\Users\vitor\OneDrive\Desktop\WednesdayTalkLabs\WednesdayTalkLabs\obj\Debug\net7.0\refint\WednesdayTalkLabs.dll
+C:\Users\vitor\OneDrive\Desktop\WednesdayTalkLabs\WednesdayTalkLabs\obj\Debug\net7.0\WednesdayTalkLabs.pdb
+C:\Users\vitor\OneDrive\Desktop\WednesdayTalkLabs\WednesdayTalkLabs\obj\Debug\net7.0\WednesdayTalkLabs.genruntimeconfig.cache
+C:\Users\vitor\OneDrive\Desktop\WednesdayTalkLabs\WednesdayTalkLabs\obj\Debug\net7.0\ref\WednesdayTalkLabs.dll
