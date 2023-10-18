@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PiticoConsole", "PiticoConsole.csproj", "{54541FB6-2A01-4212-841E-4F4E7A426D7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PiticoConsole", "PiticoConsole.csproj", "{4CA1D22D-90F1-46D0-8477-925EB520FE04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{54541FB6-2A01-4212-841E-4F4E7A426D7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{54541FB6-2A01-4212-841E-4F4E7A426D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{54541FB6-2A01-4212-841E-4F4E7A426D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{54541FB6-2A01-4212-841E-4F4E7A426D7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CA1D22D-90F1-46D0-8477-925EB520FE04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CA1D22D-90F1-46D0-8477-925EB520FE04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CA1D22D-90F1-46D0-8477-925EB520FE04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CA1D22D-90F1-46D0-8477-925EB520FE04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9089A5F7-654E-4043-BB4D-90BA6639B573}
+		SolutionGuid = {EE61DDA7-B932-45F4-8011-90EA32FC5913}
 	EndGlobalSection
 EndGlobal

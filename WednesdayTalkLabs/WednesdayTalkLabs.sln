@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WednesdayTalkLabs", "WednesdayTalkLabs\WednesdayTalkLabs.csproj", "{7E954011-DD71-4109-8EC7-20E5EDCBAA23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WednesdayTalkTests", "WednesdayTalkTests\WednesdayTalkTests.csproj", "{95FC015E-75DD-4AC0-90CE-BAEE82BFEB44}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E954011-DD71-4109-8EC7-20E5EDCBAA23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E954011-DD71-4109-8EC7-20E5EDCBAA23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E954011-DD71-4109-8EC7-20E5EDCBAA23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E954011-DD71-4109-8EC7-20E5EDCBAA23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95FC015E-75DD-4AC0-90CE-BAEE82BFEB44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95FC015E-75DD-4AC0-90CE-BAEE82BFEB44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95FC015E-75DD-4AC0-90CE-BAEE82BFEB44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95FC015E-75DD-4AC0-90CE-BAEE82BFEB44}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E234E500-7004-4E7D-A935-C25057082ADC}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "StressExecutor": {
+      "commandName": "Project",
+      "commandLineArgs": "3 \"C:\\Users\\vitor\\OneDrive\\Desktop\\FlowsElasticSearchStressTest\\FlowsElasticSearchStressTest\\bin\\Debug\\FlowsElasticSearchStressTest.exe\""
+    }
+  }
+}
