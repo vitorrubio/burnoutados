@@ -379,16 +379,3 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
-/.vs/slnx.sqlite
-/.vs/VSWorkspaceState.json
-/AgendaBeleza/AgendaBeleza/.vs/AgendaBeleza/config/applicationhost.config
-/AgendaBeleza/AgendaBeleza/.vs/AgendaBeleza/DesignTimeBuild/.dtbcache.v2
-/AgendaBeleza/AgendaBeleza/.vs/AgendaBeleza/FileContentIndex/15a83b75-e374-4cc5-ab83-8146c38bd674.vsidx
-/AgendaBeleza/AgendaBeleza/.vs/AgendaBeleza/FileContentIndex/300df593-70cd-4323-84c2-ad85185f08c2.vsidx
-/AgendaBeleza/AgendaBeleza/.vs/AgendaBeleza/FileContentIndex/38117126-7734-4b6c-9a30-85bce0ec4c49.vsidx
-/AgendaBeleza/AgendaBeleza/.vs/AgendaBeleza/FileContentIndex/87d1b4ea-e456-4aae-9733-9655d2de50aa.vsidx
-/AgendaBeleza/AgendaBeleza/.vs/AgendaBeleza/FileContentIndex/fa42eb1e-37cd-419a-97a6-420d6c35825c.vsidx
-/AgendaBeleza/AgendaBeleza/.vs/AgendaBeleza/v17/.futdcache.v2
-/AgendaBeleza/AgendaBeleza/.vs/AgendaBeleza/v17/.suo
-/AgendaBeleza/AgendaBeleza/.vs/ProjectEvaluation/agendabeleza.metadata.v7.bin
-/AgendaBeleza/AgendaBeleza/.vs/ProjectEvaluation/agendabeleza.projects.v7.bin
