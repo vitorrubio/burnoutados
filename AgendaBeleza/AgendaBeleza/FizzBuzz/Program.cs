@@ -8,15 +8,15 @@
             for (int i = 0; i<=100; i++)
             {
                 
-                if(EhDivisivel(i, 15))
+                if(Math.IEEERemainder (i, 15) == 0)
                 {
                     Console.WriteLine("Fizz Buzz");
                 }
-                else if (EhDivisivel(i ,5))
+                else if (Math.IEEERemainder(i ,5) == 0)
                 {
                     Console.WriteLine("Buzz");
                 }
-                else if (EhDivisivel(i , 3))
+                else if (Math.IEEERemainder(i , 3) == 0)
                 {
                     Console.WriteLine("Fizz");
                 }
@@ -30,14 +30,14 @@
             Console.ReadLine();
         }
 
-        public static bool EhDivisivel(double x, double y)
-        {
-            double q = x / y;
+        //public static bool EhDivisivel(double x, double y)
+        //{
+        //    double q = x / y;
 
-            int vizinhoDeBaixo = (int)q;
-            int vizinhoDeCima = vizinhoDeBaixo+1;
+        //    int vizinhoDeBaixo = (int)q;
+        //    int vizinhoDeCima = vizinhoDeBaixo+1;
 
-            return !(q > vizinhoDeBaixo && q < vizinhoDeCima);
-        }
+        //    return !(q > vizinhoDeBaixo && q < vizinhoDeCima);
+        //}
     }
 }
