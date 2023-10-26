@@ -4,19 +4,19 @@
     {
         static void Main(string[] args)
         {
-            int nenhum = 0;
+
             for (int i = 0; i<=100; i++)
             {
-                /*
-                if(i % 15 == 0)
+                
+                if(EhDivisivel(i, 15))
                 {
                     Console.WriteLine("Fizz Buzz");
                 }
-                else if (i % 5 == 0)
+                else if (EhDivisivel(i ,5))
                 {
                     Console.WriteLine("Buzz");
                 }
-                else if (i % 3 == 0)
+                else if (EhDivisivel(i , 3))
                 {
                     Console.WriteLine("Fizz");
                 }
@@ -24,31 +24,20 @@
                 {
                     Console.WriteLine(i);
                 }
-                */
-
-                switch(i % 15)
-                {
-                    case 0:
-                        Console.WriteLine("Fizz Buzz");
-                        break;
-                    case 3:
-                    case 6:
-                    case 9:
-                    case 12:
-                        Console.WriteLine("Fizz");
-                        break;
-                    case 5:
-                    case 10:
-                        Console.WriteLine("Buzz");
-                        break;
-                    default:
-                        nenhum++;
-                        Console.WriteLine(i);
-                        break;
-                }
+                
             }
-            Console.WriteLine($"nenhum: {nenhum}");
+
             Console.ReadLine();
+        }
+
+        public static bool EhDivisivel(double x, double y)
+        {
+            double q = x / y;
+
+            int vizinhoDeBaixo = (int)q;
+            int vizinhoDeCima = vizinhoDeBaixo+1;
+
+            return !(q > vizinhoDeBaixo && q < vizinhoDeCima);
         }
     }
 }
