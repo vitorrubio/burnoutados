@@ -18,25 +18,47 @@ namespace FizzBuzz
             {"num", new NumStrategy() },
         };
 
+        
+
 
         public static ICalculadoraFizzBuzz Obter(int i)
         {
-            if (Math.IEEERemainder(i, 15) == 0)
-            {
-                return _strategies["fizzbuzz"];
-            }
-            
-            if (Math.IEEERemainder(i, 5) == 0)
-            {
-                return _strategies["buzz"];
-            }
-            
-            if (Math.IEEERemainder(i, 3) == 0)
-            {
-                return _strategies["fizz"];
-            }
+            Func<ICalculadoraFizzBuzz> fizzbuzz = () => _strategies["fizzbuzz"];
+            Func<ICalculadoraFizzBuzz> fizz = () => _strategies["fizz"];
+            Func<ICalculadoraFizzBuzz> buzz = () => _strategies["buzz"];
+            Func<ICalculadoraFizzBuzz> num = () => _strategies["num"];
 
-            return _strategies["num"];
+
+
+            var a = new Dictionary<bool, Func<ICalculadoraFizzBuzz>>
+            {
+                {true,  fizzbuzz},
+                {false, () => 
+                    {
+                       var b = new Dictionary<bool, Func< ICalculadoraFizzBuzz>>
+                       {
+                           {true, buzz },
+                           {false, () =>
+                               {
+                                  var c = new Dictionary<bool, Func< ICalculadoraFizzBuzz>>
+                                  {
+                                      {true, fizz },
+                                      {false, num }
+                                  };
+
+                                   return c[i % 3 == 0].Invoke();
+                               }
+                           }
+                       };
+
+                       return b[i % 5 == 0].Invoke();
+                    } 
+                },
+            };
+
+
+
+            return a[i % 15 == 0].Invoke();
 
         }
     }
