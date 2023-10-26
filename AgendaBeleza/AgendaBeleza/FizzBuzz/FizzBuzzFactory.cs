@@ -23,42 +23,42 @@ namespace FizzBuzz
 
         public static ICalculadoraFizzBuzz Obter(int i)
         {
-            Func<ICalculadoraFizzBuzz> fizzbuzz = () => _strategies["fizzbuzz"];
-            Func<ICalculadoraFizzBuzz> fizz = () => _strategies["fizz"];
-            Func<ICalculadoraFizzBuzz> buzz = () => _strategies["buzz"];
-            Func<ICalculadoraFizzBuzz> num = () => _strategies["num"];
+            
 
-
-
-            var a = new Dictionary<bool, Func<ICalculadoraFizzBuzz>>
+            Func<ICalculadoraFizzBuzz> fizz = () =>
             {
-                {true,  fizzbuzz},
-                {false, () => 
-                    {
-                       var b = new Dictionary<bool, Func< ICalculadoraFizzBuzz>>
-                       {
-                           {true, buzz },
-                           {false, () =>
-                               {
-                                  var c = new Dictionary<bool, Func< ICalculadoraFizzBuzz>>
-                                  {
-                                      {true, fizz },
-                                      {false, num }
-                                  };
+                var dic = new Dictionary<bool, ICalculadoraFizzBuzz>
+                {
+                    { true, _strategies["fizz"]},
+                    { false, _strategies["num"]}
+                };
 
-                                   return c[i % 3 == 0].Invoke();
-                               }
-                           }
-                       };
-
-                       return b[i % 5 == 0].Invoke();
-                    } 
-                },
+                return dic[i % 3 == 0];
             };
 
+            Func<ICalculadoraFizzBuzz> buzz = () =>
+            {
+                var dic = new Dictionary<bool, ICalculadoraFizzBuzz>
+                {
+                    { true, _strategies["buzz"]},
+                    { false, fizz()}
+                };
 
+                return dic[i % 5 == 0];
+            };
 
-            return a[i % 15 == 0].Invoke();
+            Func<ICalculadoraFizzBuzz> fizzbuzz = () =>
+            {
+                var dic = new Dictionary<bool, ICalculadoraFizzBuzz>
+                {
+                    { true, _strategies["fizzbuzz"]},
+                    { false, buzz()}
+                };
+
+                return dic[i % 15 == 0];
+            };
+
+            return fizzbuzz();
 
         }
     }
