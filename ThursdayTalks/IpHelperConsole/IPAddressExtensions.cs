@@ -1,13 +1,14 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.HttpOverrides;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ColorsConsole
+namespace IPAddressHelpers
 {
-    public static class IpExtensions
+    public static class IPAddressExtensions
     {
         public static UInt32 BaseAddress(byte cidr)
         {
@@ -36,12 +37,28 @@ namespace ColorsConsole
 
         public static UInt32 SubnetLookupKey( this IPAddress ip, UInt32 mask)
         {
-            return (IpExtensions.IpToUInt(ip) & mask);
+            return (ip.IpToUInt() & mask);
         }
 
         public static UInt32 CidrBasedSubnetLookupKey(this IPAddress ip, byte cidr)
         {
             return SubnetLookupKey(ip, BaseAddress(cidr));
         }
+    }
+
+    public static class IpTreeBuilder
+    {
+        public static ILookup<IPAddress, IPAddress> BuildIpLookup(List<string> ips, byte cidr = 24)
+        {
+            
+            var table = ips
+                .Select(x => IPAddress.Parse(x))
+                .ToLookup(x => IPAddressExtensions.UIntToIp(x.CidrBasedSubnetLookupKey(cidr)));
+
+            return table;
+            
+        }
+
+
     }
 }
