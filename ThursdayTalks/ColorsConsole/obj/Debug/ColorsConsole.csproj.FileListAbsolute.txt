@@ -1,8 +1,0 @@
-C:\Users\vitor\OneDrive\Desktop\WebApplication1\ColorsConsole\bin\Debug\ColorsConsole.exe.config
-C:\Users\vitor\OneDrive\Desktop\WebApplication1\ColorsConsole\bin\Debug\ColorsConsole.exe
-C:\Users\vitor\OneDrive\Desktop\WebApplication1\ColorsConsole\bin\Debug\ColorsConsole.pdb
-C:\Users\vitor\OneDrive\Desktop\WebApplication1\ColorsConsole\obj\Debug\ColorsConsole.csproj.AssemblyReference.cache
-C:\Users\vitor\OneDrive\Desktop\WebApplication1\ColorsConsole\obj\Debug\ColorsConsole.csproj.SuggestedBindingRedirects.cache
-C:\Users\vitor\OneDrive\Desktop\WebApplication1\ColorsConsole\obj\Debug\ColorsConsole.csproj.CoreCompileInputs.cache
-C:\Users\vitor\OneDrive\Desktop\WebApplication1\ColorsConsole\obj\Debug\ColorsConsole.exe
-C:\Users\vitor\OneDrive\Desktop\WebApplication1\ColorsConsole\obj\Debug\ColorsConsole.pdb
