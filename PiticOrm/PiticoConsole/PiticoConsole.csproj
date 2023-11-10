@@ -5,6 +5,11 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\PiticoOrm\PiticoOrm.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net7.0</TargetFramework>
