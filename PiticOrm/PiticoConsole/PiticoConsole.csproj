@@ -7,7 +7,7 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\..\PiticoOrm\PiticoOrm.csproj" />
+    <ProjectReference Include="..\PiticoOrm\PiticoOrm.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
