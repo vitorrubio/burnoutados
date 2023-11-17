@@ -1,0 +1,40 @@
+﻿@model Produto
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@using (Html.BeginForm("Salvar", "Home", FormMethod.Post))
+{
+    <fieldset>
+        <div class="row">
+            <div class="form-group col-sm-4">
+                @Html.LabelFor(m => m.Id)
+                @Html.EditorFor(x => x.Id)
+            </div>
+
+            <div class="form-group col-sm-4">
+                @Html.LabelFor(m => m.Nome)
+                @Html.EditorFor(x => x.Nome)
+            </div>
+
+            <div class="form-group col-sm-4">
+                @Html.LabelFor(m => m.Preco)
+                @Html.EditorFor(x => x.Preco)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <button type="submit">Salvar</button>
+            </div>
+        </div>
+    </fieldset>
+}
+
+<div class="container">
+    @await Html.PartialAsync("ProdutosPartial", Produto.BdProdutos)
+</div>

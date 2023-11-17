@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
@@ -7,9 +8,18 @@ using System.Linq;
 namespace PiticoOrm
 {
 
+    public static class PiticoHelpers
+    {
+        public static IServiceCollection AddPitico(this IServiceCollection col)
+        {
+            return col
+                .AddScoped<IPiticoSql, PiticoSql>();
+        }
+    }
+
     public delegate void DatabaseMapRowDelegate<in T>(T item, IDataRecord record, int rowNum) where T: class, new();
 
-    public class PiticoSql
+    public class PiticoSql : IPiticoSql
     {
         private readonly string _connectionString;
 
@@ -190,7 +200,7 @@ namespace PiticoOrm
             //item.GetType().GetProperty("updatedAt").SetValue(item, DateTime.Now);
 
 
-            string sqlBase = $"update { (typeof(T).Name)}s set";
+            string sqlBase = $"update {(typeof(T).Name)}s set";
             var props = item.GetType().GetProperties().Where(x => x.Name != "id" && x.GetValue(item) != null).ToList();
 
             var colunasUpdate = props.Select(x => $"{x.Name} = @{x.Name}").ToList();// NomeCampo = @NomeCampo
