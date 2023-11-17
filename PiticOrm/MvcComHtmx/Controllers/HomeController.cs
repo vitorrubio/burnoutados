@@ -18,14 +18,14 @@ namespace MvcTradicional.Controllers
             return View("Index");
         }
 
+
+
         [HttpPost]
         public IActionResult Salvar(Produto prod)
         {
             Produto.BdProdutos.Add(prod);
-            Thread.Sleep(2000);
-            //return RedirectToAction("Index");
-            return Index();
             //return View("Index");
+            return PartialView(prod);
         }
 
         public IActionResult Privacy()

@@ -1,0 +1,22 @@
+﻿@model List<Produto>
+
+<table id="tblProd">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Preco</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Id</td>
+                <td>@p.Nome</td>
+                <td>@p.Preco</td>
+            </tr>
+        }
+    </tbody>
+</table>

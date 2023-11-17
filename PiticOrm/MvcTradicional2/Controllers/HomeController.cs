@@ -15,7 +15,7 @@ namespace MvcTradicional.Controllers
 
         public IActionResult Index()
         {
-            return View("Index");
+            return View();
         }
 
         [HttpPost]
@@ -24,8 +24,9 @@ namespace MvcTradicional.Controllers
             Produto.BdProdutos.Add(prod);
             Thread.Sleep(2000);
             //return RedirectToAction("Index");
-            return Index();
+            //return Index();
             //return View("Index");
+            return PartialView("ProdutosPartial", Produto.BdProdutos);
         }
 
         public IActionResult Privacy()
