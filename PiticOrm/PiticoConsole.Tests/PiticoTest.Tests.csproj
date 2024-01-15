@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\PiticoOrm\PiticoOrm.csproj" />
     <ProjectReference Include="..\PiticoConsole\PiticoConsole.csproj" />
   </ItemGroup>
 

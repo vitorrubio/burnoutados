@@ -1,4 +1,6 @@
-﻿Console.WriteLine("Hello, World!");
+﻿using PiticoOrm;
+
+Console.WriteLine("Hello, World!");
 
 PiticoSql banco = new PiticoSql("Server=DESKTOP-RE767MN;Database=burnoutados;Trusted_Connection=True;MultipleActiveResultSets=true");
 
