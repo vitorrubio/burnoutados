@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StressExecutor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f61501b575ab9ada84c21205b2d77e9718707af0")]
 [assembly: System.Reflection.AssemblyProductAttribute("StressExecutor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StressExecutor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
